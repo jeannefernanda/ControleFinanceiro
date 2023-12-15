@@ -8,7 +8,7 @@ class Principal {
         for (let i = 0; i < Principal.listaDeTransacoes.length; i++) {
             if (Principal.listaDeTransacoes[i].categoria.tipo === "Entrada") {
                 somaEntradas += Principal.listaDeTransacoes[i].valor;
-                Principal.salvarNoJSON('dados.json')
+                Principal.salvarNoJSON('base/transacoes.json')
             }
         }
         return somaEntradas;

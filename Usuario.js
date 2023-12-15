@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 class Usuario {
     nome;
     static listaDeUsuarios = []
@@ -5,6 +7,7 @@ class Usuario {
     constructor(nome) {
         this.nome = nome;
         Usuario.listaDeUsuarios.push(this);
+        Usuario.salvarNoJSON('base/usuarios.json')
     }
 
     getNome() {
@@ -13,6 +16,12 @@ class Usuario {
 
     setNome(novoNome) {
         this.nome = novoNome;
+    }
+
+    static salvarNoJSON(caminho) {
+        const dadosJSON = JSON.stringify(Usuario.listaDeUsuarios, null, 2);
+        fs.writeFileSync(caminho, dadosJSON);
+        console.log('Dados salvos com sucesso.');
     }
 }
 

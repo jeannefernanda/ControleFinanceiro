@@ -1,0 +1,18 @@
+[
+  {
+    "nome": "Moradia",
+    "tipo": "Saída"
+  },
+  {
+    "nome": "Educação",
+    "tipo": "Saída"
+  },
+  {
+    "nome": "Transporte",
+    "tipo": "Saída"
+  },
+  {
+    "nome": "Salario",
+    "tipo": "Entrada"
+  }
+]

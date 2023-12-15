@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 class Categoria {
     nome;
     tipo = ['Entrada', 'Saída']
@@ -10,6 +12,7 @@ class Categoria {
         }
 
         Categoria.listaDeCategorias.push(this);
+        Categoria.salvarNoJSON('base/categorias.json');
 
     }
 
@@ -19,6 +22,12 @@ class Categoria {
 
     setNome(novoNome) {
         this.nome = novoNome;
+    }
+
+    static salvarNoJSON(caminho) {
+        const dadosJSON = JSON.stringify(Categoria.listaDeCategorias, null, 2);
+        fs.writeFileSync(caminho, dadosJSON);
+        console.log('Dados salvos com sucesso.');
     }
 }
 

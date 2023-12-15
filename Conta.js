@@ -1,3 +1,5 @@
+
+const fs = require('fs');
 class Conta {
     nome;
     tipo = ['Conta Corrente', 'Poupança', 'Carteira'];
@@ -12,7 +14,8 @@ class Conta {
         } else {
             throw new Error('Tipo de conta inválida.')
         }
-        Conta.listaDeContas.push(this)
+        Conta.listaDeContas.push(this);
+        Conta.salvarNoJSON('base/contas.json');
 
     }
 
@@ -38,6 +41,12 @@ class Conta {
 
     setSaldoInicial(novoSaldoInicial) {
         this.saldoInicial = novoSaldoInicial;
+    }
+
+    static salvarNoJSON(caminho) {
+        const dadosJSON = JSON.stringify(Conta.listaDeContas, null, 2);
+        fs.writeFileSync(caminho, dadosJSON);
+        console.log('Dados salvos com sucesso.');
     }
 }
 
