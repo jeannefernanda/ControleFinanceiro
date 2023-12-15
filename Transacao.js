@@ -6,16 +6,20 @@ const Principal = require('./Principal')
 class Transacao{
     descricao;
     valor;
+    dataDeVencimento;
+    dataDePagamento;
     categoria;
     conta;
     usuario;
 
-    constructor(descricao, valor, categoria, conta, usuario){
+    constructor(descricao, valor, dataDeVencimento, dataDePagamento, categoria, conta, usuario){
         if(!(categoria instanceof Categoria)) throw new Error('Categoria não cadastrada.');
         if(!(conta instanceof Conta)) throw new Error('Conta não cadastrada.');
         if(!(usuario instanceof Usuario)) throw new Error ('Usuário não cadastrado');
         this.descricao = descricao;
         this.valor = valor;
+        this.dataDeVencimento = dataDeVencimento;
+        this.dataDePagamento = dataDePagamento;
         this.categoria = categoria;
         this.conta = conta;
         this.usuario = usuario;
