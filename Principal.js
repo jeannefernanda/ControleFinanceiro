@@ -1,4 +1,3 @@
-const Transacao = require('./Transacao')
 const fs = require('fs')
 
 class Principal {
