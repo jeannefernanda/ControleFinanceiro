@@ -1,5 +1,4 @@
 const fs = require('fs');
-const Usuario = require('./Usuario');
 
 class Principal {
     static listaDeTransacoes = []
