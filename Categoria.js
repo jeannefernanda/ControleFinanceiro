@@ -1,20 +1,23 @@
-class Categoria{
+class Categoria {
     nome;
     tipo = ['Entrada', 'Saída']
+    static listaDeCategorias = []
 
-    constructor(nome, tipo){
-        if(this.tipo.includes(tipo)){
+    constructor(nome, tipo) {
+        if (this.tipo.includes(tipo)) {
             this.nome = nome;
             this.tipo = tipo;
         }
-        
+
+        Categoria.listaDeCategorias.push(this);
+
     }
 
-    getNome(){
+    getNome() {
         return this.nome;
     }
 
-    setNome(novoNome){
+    setNome(novoNome) {
         this.nome = novoNome;
     }
 }

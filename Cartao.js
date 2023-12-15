@@ -1,45 +1,47 @@
-class Cartao{
+class Cartao {
     nome;
     limite;
     vencimento;
     fechamento;
+    static listaDeCartoes = []
 
-    constructor(nome, limite, vencimento, fechamento){
+    constructor(nome, limite, vencimento, fechamento) {
         this.nome = nome;
         this.limite = limite;
         this.vencimento = vencimento;
         this.fechamento = fechamento;
+        Cartao.listaDeCartoes.push(this);
     }
 
-    getNome(){
+    getNome() {
         return this.nome;
     }
 
-    setNome(novoNome){
+    setNome(novoNome) {
         this.nome = novoNome;
     }
 
-    getLimite(){
+    getLimite() {
         return this.limite;
     }
 
-    setLimite(novoLimite){
+    setLimite(novoLimite) {
         this.limite = novoLimite;
     }
 
-    getVencimento(){
+    getVencimento() {
         return this.vencimento;
     }
 
-    setVencimento(novoVencimento){
+    setVencimento(novoVencimento) {
         this.vencimento = novoVencimento;
     }
 
-    getFechamento(){
+    getFechamento() {
         return this.fechamento
     }
 
-    setFechamento(novoFechamento){
+    setFechamento(novoFechamento) {
         this.fechamento = novoFechamento;
     }
 }

@@ -36,6 +36,6 @@ console.log(Principal.listaDeTransacoes[1].categoria.tipo)
 console.log(Principal.calcularEntradas());
 console.log(Principal.calcularSaidas());
 console.log(Principal.CalcularSaldoDisponivel())
-
+console.log(Categoria.listaDeCategorias)
 
 

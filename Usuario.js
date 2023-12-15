@@ -1,15 +1,17 @@
-class Usuario{
+class Usuario {
     nome;
+    static listaDeUsuarios = []
 
-    constructor(nome){
+    constructor(nome) {
         this.nome = nome;
+        Usuario.listaDeUsuarios.push(this);
     }
 
-    getNome(){
+    getNome() {
         return this.nome;
     }
 
-    setNome(novoNome){
+    setNome(novoNome) {
         this.nome = novoNome;
     }
 }
