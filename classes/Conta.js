@@ -46,7 +46,7 @@ class Conta {
     static salvarNoJSON(caminho) {
         const dadosJSON = JSON.stringify(Conta.listaDeContas, null, 2);
         fs.writeFileSync(caminho, dadosJSON);
-        console.log('Dados salvos com sucesso.');
+        
     }
 }
 

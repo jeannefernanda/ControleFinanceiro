@@ -52,7 +52,7 @@ class Cartao {
     static salvarNoJSON(caminho) {
         const dadosJSON = JSON.stringify(Cartao.listaDeCartoes, null, 2);
         fs.writeFileSync(caminho, dadosJSON);
-        console.log('Dados salvos com sucesso.');
+        
     }
 }
 

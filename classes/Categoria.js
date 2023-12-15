@@ -27,7 +27,7 @@ class Categoria {
     static salvarNoJSON(caminho) {
         const dadosJSON = JSON.stringify(Categoria.listaDeCategorias, null, 2);
         fs.writeFileSync(caminho, dadosJSON);
-        console.log('Dados salvos com sucesso.');
+        
     }
 }
 

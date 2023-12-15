@@ -2,6 +2,7 @@ const Categoria = require('./Categoria');
 const Conta = require('./Conta');
 const Usuario = require('./Usuario');
 const Principal = require('./Principal')
+const fs = require('fs');
 
 class Transacao {
     descricao;
@@ -24,6 +25,7 @@ class Transacao {
         this.conta = conta;
         this.usuario = usuario;
         Principal.listaDeTransacoes.push(this);
+        Transacao.salvarNoJSON('base/transacoes.json');
     }
 
     getDescricao() {
@@ -80,6 +82,12 @@ class Transacao {
 
     setUsuario(novoUsuario) {
         this.usuario = novoUsuario;
+    }
+
+    static salvarNoJSON(caminho) {
+        const dadosJSON = JSON.stringify(Principal.listaDeTransacoes, null, 2);
+        fs.writeFileSync(caminho, dadosJSON);
+        
     }
 
 }

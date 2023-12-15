@@ -21,7 +21,7 @@ class Usuario {
     static salvarNoJSON(caminho) {
         const dadosJSON = JSON.stringify(Usuario.listaDeUsuarios, null, 2);
         fs.writeFileSync(caminho, dadosJSON);
-        console.log('Dados salvos com sucesso.');
+
     }
 }
 
