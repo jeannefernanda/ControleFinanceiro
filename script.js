@@ -12,7 +12,9 @@ const categoria3 = new Categoria('Transporte', 'Saída');
 const categoria4 = new Categoria('Salario', 'Entrada');
 
 const usuario1 = new Usuario('João')
+
 const usuario2 = new Usuario('Maria')
+
 
 const cartao1 = new Cartao('Nubank', 2000, '01', '25')
 
@@ -38,4 +40,5 @@ console.log(Principal.calcularSaidas());
 console.log(Principal.CalcularSaldoDisponivel())
 console.log(Categoria.listaDeCategorias)
 
+console.log(Usuario.listaDeUsuarios)
 

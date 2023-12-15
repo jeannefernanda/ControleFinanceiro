@@ -1,4 +1,5 @@
-const fs = require('fs')
+const fs = require('fs');
+const Usuario = require('./Usuario');
 
 class Principal {
     static listaDeTransacoes = []
@@ -33,6 +34,7 @@ class Principal {
         fs.writeFileSync(caminho, dadosJSON);
         console.log('Dados salvos com sucesso.');
     }
+
 
 }
 
