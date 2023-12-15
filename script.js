@@ -1,9 +1,9 @@
-const Conta = require('../ControleFinanceiro/Conta');
-const Categoria = require('../ControleFinanceiro/Categoria')
-const Usuario = require('../ControleFinanceiro/Usuario');
-const Cartao = require('../ControleFinanceiro/Cartao');
-const Transacao = require('./Transacao');
-const Principal = require('./Principal');
+const Conta = require('../ControleFinanceiro/classes/Conta');
+const Categoria = require('../ControleFinanceiro/classes/Categoria')
+const Usuario = require('../ControleFinanceiro/classes/Usuario');
+const Cartao = require('../ControleFinanceiro/classes/Cartao');
+const Transacao = require('./classes/Transacao');
+const Principal = require('./classes/Principal');
 
 const categoria1 = new Categoria('Moradia', 'Saída');
 const categoria2 = new Categoria('Educação', 'Saída');
